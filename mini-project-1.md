@@ -499,7 +499,6 @@ sufficient comments for a reader to understand your reasoning and code.
 
 ## Question 2:
 
-    ## Question 2:
     lilac <- filter(vancouver_trees, common_name == "TREE LILAC")
     westlilac <- filter(lilac, neighbourhood_name == "WEST END")
     distinct(westlilac, std_street)
@@ -512,11 +511,11 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 3 NICOLA ST   
     ## 4 BROUGHTON ST
 
-    ## Why I answered question 2: 
+## Why I answered question 2:
 
-    ## I wanted to see how many Lilac trees there are in the data set in a given neighborhood of vancouver and which streets they are located on. To do this I had to create a new variable filtered by trees with the common name Lilac in the data set. I then created a second new variable which I filtered through the old variable 'lilac' and only stored lilac trees in the west end neighborhood (in a new variable called 'westlilac')
+## I wanted to see how many Lilac trees there are in the data set in a given neighborhood of vancouver and which streets they are located on. To do this I had to create a new variable filtered by trees with the common name Lilac in the data set. I then created a second new variable which I filtered through the old variable ‘lilac’ and only stored lilac trees in the west end neighborhood (in a new variable called ‘westlilac’)
 
-    ## Question 5:
+## Question 5:
 
     pru <- filter(vancouver_trees, genus_name == "PRUNUS" )
     distinct(pru, common_name)
@@ -617,29 +616,29 @@ sufficient comments for a reader to understand your reasoning and code.
     ## #   diameter <dbl>, curb <chr>, date_planted <date>, longitude <dbl>,
     ## #   latitude <dbl>
 
-    ## Why I answered question 5: 
+## Why I answered question 5:
 
-    ## I would like to eventually zone in on the cherry trees in this data set, for now I thought I would filter for their genus. I did this by using the dplyr filter() function to search through the column genus_name for the genus "PRUNUS". 
+## I would like to eventually zone in on the cherry trees in this data set, for now I thought I would filter for their genus. I did this by using the dplyr filter() function to search through the column genus\_name for the genus “PRUNUS”.
 
-    # After doing so, I thought I would check to see that there are cherry trees in the data set and what their common names are using the distinct() fucntion. 
+# After doing so, I thought I would check to see that there are cherry trees in the data set and what their common names are using the distinct() fucntion.
 
-    #Finally to make sure there is an adequate amount of data for the different neighborhoods I though that I would check the number of trees in the genus "PRUNUS" by neighborhood. 
+\#Finally to make sure there is an adequate amount of data for the
+different neighborhoods I though that I would check the number of trees
+in the genus “PRUNUS” by neighborhood.
 
-    ## Question 1:
+## Question 1:
 
     pru %>%
       filter(diameter < 50) %>%
     ggplot(aes (x = diameter)) + 
       geom_histogram(binwidth = 6) 
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+\## Why I answered question 1:
 
-    ## Why I answered question 1: 
+### Histograms are a nice way to look at the distribution of a numeric variable, I was curious after filtering for the diameters of trees in the genus prunus in question 5, what the distribution of the variable diameter looks like for the genus prunus under 50 (since 0-50 seems to be where majority of the data points lie).
 
-    ### Histograms are a nice way to look at the distribution of a numeric variable, I was curious after filtering for the diameters of trees in the genus prunus in question 5, what the distribution of the variable diameter looks like for the genus prunus under 50 (since 0-50 seems to be where majority of the data points lie).
-
-
-    ## Question 7:
+## Question 7:
 
     dt_tib <- as_tibble(pru) %>%
     filter(neighbourhood_name == "DOWNTOWN") %>%
@@ -662,24 +661,21 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 10 2012-04-13   RANCHO SARGENT CHERRY    DOWNTOWN          
     ## # ℹ 161 more rows
 
-    ## Why I answered question 7: 
+## Why I answered question 7:
 
-    ### I wanted to put the trees in genus 'prunus' into a new tibble that only showed the ones located in the Downtown neighborhood. I also wanted the columns date_planted and common_name, so that I can further use this data to find out how many trees there is no (or <NA>) tree planting date for in this area. This tibble give me options to further explore the genus 'prunus' trees in the neighborhood of downtown. 
+### I wanted to put the trees in genus ‘prunus’ into a new tibble that only showed the ones located in the Downtown neighborhood. I also wanted the columns date\_planted and common\_name, so that I can further use this data to find out how many trees there is no (or <NA>) tree planting date for in this area. This tibble give me options to further explore the genus ‘prunus’ trees in the neighborhood of downtown.
 
-    ### To do this I created a new tibble with this information and named it dt_tib.
+### To do this I created a new tibble with this information and named it dt\_tib.
 
-<!----------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------->
 
-# Task 3: Choose research questions
+    # Task 3: Choose research questions 
 
-**(4 points)** So far, you have chosen a dataset and gotten familiar
-with it through exploring the data. You have also brainstormed one
-research question that interested you (Task 1.4). Now it’s time to pick
-4 research questions that you would like to explore in Milestone 2!
-Write the 4 questions and any additional comments below.
+    **(4 points)** So far, you have chosen a dataset and gotten familiar with it through exploring the data. You have also brainstormed one research question that interested you (Task 1.4).  Now it's time to pick 4 research questions that you would like to explore in Milestone 2! Write the 4 questions and any additional comments below. 
 
-<!--- *****START HERE***** --->
+    <!--- *****START HERE***** --->
 
+    ```r
     ### Four Research Question - For Future Exploration:
 
     # While looking through the vancouver_trees data set many questions crossed my mind, below I have managed to narrow my questions down to four that I hope to answer in the future:
