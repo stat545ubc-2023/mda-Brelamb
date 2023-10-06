@@ -497,6 +497,8 @@ sufficient comments for a reader to understand your reasoning and code.
 
 <!-------------------------- Start your work below ---------------------------->
 
+## Question 2:
+
     ## Question 2:
     lilac <- filter(vancouver_trees, common_name == "TREE LILAC")
     westlilac <- filter(lilac, neighbourhood_name == "WEST END")
