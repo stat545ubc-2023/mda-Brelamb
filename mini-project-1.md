@@ -1,3 +1,6 @@
+Mini Data-Analysis Deliverable 1
+================
+
 # Welcome to your (maybe) first-ever data analysis project!
 
 And hopefully the first of many. Let’s get started:
@@ -10,12 +13,12 @@ And hopefully the first of many. Let’s get started:
     install.packages("devtools")
     devtools::install_github("UBC-MDS/datateachr")
 
-1.  Load the packages below.
+2.  Load the packages below.
 
-<!-- -->
-
-    library(datateachr)
-    library(tidyverse)
+``` r
+library(datateachr)
+library(tidyverse)
+```
 
     ## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
     ## ✔ dplyr     1.1.3     ✔ readr     2.1.4
@@ -28,7 +31,7 @@ And hopefully the first of many. Let’s get started:
     ## ✖ dplyr::lag()    masks stats::lag()
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
-1.  Make a repository in the <https://github.com/stat545ubc-2023>
+3.  Make a repository in the <https://github.com/stat545ubc-2023>
     Organization. You can do this by following the steps found on canvas
     in the entry called [MDA: Create a
     repository](https://canvas.ubc.ca/courses/126199/pages/mda-create-a-repository).
@@ -39,22 +42,22 @@ And hopefully the first of many. Let’s get started:
 
 ## For Both Milestones
 
--   Each milestone has explicit tasks. Tasks that are more challenging
-    will often be allocated more points.
+- Each milestone has explicit tasks. Tasks that are more challenging
+  will often be allocated more points.
 
--   Each milestone will be also graded for reproducibility, cleanliness,
-    and coherence of the overall Github submission.
+- Each milestone will be also graded for reproducibility, cleanliness,
+  and coherence of the overall Github submission.
 
--   While the two milestones will be submitted as independent
-    deliverables, the analysis itself is a continuum - think of it as
-    two chapters to a story. Each chapter, or in this case, portion of
-    your analysis, should be easily followed through by someone
-    unfamiliar with the content.
-    [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
-    is a good resource for what constitutes “good code”. Learning good
-    coding practices early in your career will save you hassle later on!
+- While the two milestones will be submitted as independent
+  deliverables, the analysis itself is a continuum - think of it as two
+  chapters to a story. Each chapter, or in this case, portion of your
+  analysis, should be easily followed through by someone unfamiliar with
+  the content.
+  [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
+  is a good resource for what constitutes “good code”. Learning good
+  coding practices early in your career will save you hassle later on!
 
--   The milestones will be equally weighted.
+- The milestones will be equally weighted.
 
 ## For Milestone 1
 
@@ -78,11 +81,11 @@ submission.
 
 By the end of this milestone, you should:
 
--   Become familiar with your dataset of choosing
--   Select 4 questions that you would like to answer with your data
--   Generate a reproducible and clear report using R Markdown
--   Become familiar with manipulating and summarizing your data in
-    tibbles using `dplyr`, with a research question in mind.
+- Become familiar with your dataset of choosing
+- Select 4 questions that you would like to answer with your data
+- Generate a reproducible and clear report using R Markdown
+- Become familiar with manipulating and summarizing your data in tibbles
+  using `dplyr`, with a research question in mind.
 
 # Task 1: Choose your favorite dataset
 
@@ -90,42 +93,42 @@ The `datateachr` package by Hayley Boyce and Jordan Bourak currently
 composed of 7 semi-tidy datasets for educational purposes. Here is a
 brief description of each dataset:
 
--   *apt\_buildings*: Acquired courtesy of The City of Toronto’s Open
-    Data Portal. It currently has 3455 rows and 37 columns.
+- *apt_buildings*: Acquired courtesy of The City of Toronto’s Open Data
+  Portal. It currently has 3455 rows and 37 columns.
 
--   *building\_permits*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 20680 rows and 14 columns.
+- *building_permits*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 20680 rows and 14 columns.
 
--   *cancer\_sample*: Acquired courtesy of UCI Machine Learning
-    Repository. It currently has 569 rows and 32 columns.
+- *cancer_sample*: Acquired courtesy of UCI Machine Learning Repository.
+  It currently has 569 rows and 32 columns.
 
--   *flow\_sample*: Acquired courtesy of The Government of Canada’s
-    Historical Hydrometric Database. It currently has 218 rows and 7
-    columns.
+- *flow_sample*: Acquired courtesy of The Government of Canada’s
+  Historical Hydrometric Database. It currently has 218 rows and 7
+  columns.
 
--   *parking\_meters*: Acquired courtesy of The City of Vancouver’s Open
-    Data Portal. It currently has 10032 rows and 22 columns.
+- *parking_meters*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 10032 rows and 22 columns.
 
--   *steam\_games*: Acquired courtesy of Kaggle. It currently has 40833
-    rows and 21 columns.
+- *steam_games*: Acquired courtesy of Kaggle. It currently has 40833
+  rows and 21 columns.
 
--   *vancouver\_trees*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 146611 rows and 20 columns.
+- *vancouver_trees*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 146611 rows and 20 columns.
 
 **Things to keep in mind**
 
--   We hope that this project will serve as practice for carrying our
-    your own *independent* data analysis. Remember to comment your code,
-    be explicit about what you are doing, and write notes in this
-    markdown document when you feel that context is required. As you
-    advance in the project, prompts and hints to do this will be
-    diminished - it’ll be up to you!
+- We hope that this project will serve as practice for carrying our your
+  own *independent* data analysis. Remember to comment your code, be
+  explicit about what you are doing, and write notes in this markdown
+  document when you feel that context is required. As you advance in the
+  project, prompts and hints to do this will be diminished - it’ll be up
+  to you!
 
--   Before choosing a dataset, you should always keep in mind **your
-    goal**, or in other ways, *what you wish to achieve with this data*.
-    This mini data-analysis project focuses on *data wrangling*,
-    *tidying*, and *visualization*. In short, it’s a way for you to get
-    your feet wet with exploring data on your own.
+- Before choosing a dataset, you should always keep in mind **your
+  goal**, or in other ways, *what you wish to achieve with this data*.
+  This mini data-analysis project focuses on *data wrangling*,
+  *tidying*, and *visualization*. In short, it’s a way for you to get
+  your feet wet with exploring data on your own.
 
 And that is exactly the first thing that you will do!
 
@@ -142,10 +145,12 @@ understand your data.
 
 <!-------------------------- Start your work below ---------------------------->
 
-    #1: CHOICE_1 *vancouver_trees*
-    #2: CHOICE_2 *building_permits*
-    #3: CHOICE_3 *parking_meters*
-    #4: CHOICE_4 *apt_buildings*
+``` r
+#1: CHOICE_1 *vancouver_trees*
+#2: CHOICE_2 *building_permits*
+#3: CHOICE_3 *parking_meters*
+#4: CHOICE_4 *apt_buildings*
+```
 
 <!----------------------------------------------------------------------------->
 
@@ -162,12 +167,14 @@ comments outside of the code chunk?
 
 <!-------------------------- Start your work below ---------------------------->
 
-    ### EXPLORE HERE ###
+``` r
+### EXPLORE HERE ###
 
-    ## CHOICE 1 - *vancouver_trees*
+## CHOICE 1 - *vancouver_trees*
 
-    # To look at the vancouver_trees data set I will use the glimspe() function.
-    glimpse(vancouver_trees)
+# To look at the vancouver_trees data set I will use the glimspe() function.
+glimpse(vancouver_trees)
+```
 
     ## Rows: 146,611
     ## Columns: 20
@@ -192,13 +199,17 @@ comments outside of the code chunk?
     ## $ longitude          <dbl> -123.1161, -123.1147, -123.0846, -123.0870, -123.08…
     ## $ latitude           <dbl> 49.21776, 49.21776, 49.23938, 49.23469, 49.23894, 4…
 
-    # After using the glimpse function I am curious to see number of unique trees types (by common name) included in the data set.
-    dim(distinct(vancouver_trees, common_name))
+``` r
+# After using the glimpse function I am curious to see number of unique trees types (by common name) included in the data set.
+dim(distinct(vancouver_trees, common_name))
+```
 
     ## [1] 634   1
 
-    # Now that I know how many there are, I would like to get an idea of the common names of the trees included in this data set.
-    distinct(vancouver_trees, common_name)
+``` r
+# Now that I know how many there are, I would like to get an idea of the common names of the trees included in this data set.
+distinct(vancouver_trees, common_name)
+```
 
     ## # A tibble: 634 × 1
     ##    common_name          
@@ -215,10 +226,12 @@ comments outside of the code chunk?
     ## 10 RAYWOOD ASH          
     ## # ℹ 624 more rows
 
-    ## CHOICE 2 - *building_permits*
+``` r
+## CHOICE 2 - *building_permits*
 
-    ### To get a quick idea of what the columns look like in building_permits I will use the glimpse() function 
-    glimpse(building_permits)
+### To get a quick idea of what the columns look like in building_permits I will use the glimpse() function 
+glimpse(building_permits)
+```
 
     ## Rows: 20,680
     ## Columns: 14
@@ -237,13 +250,17 @@ comments outside of the code chunk?
     ## $ year                        <dbl> 2017, 2017, 2017, 2017, 2017, 2017, 2017, …
     ## $ bi_id                       <dbl> 524, 535, 539, 541, 543, 546, 547, 548, 54…
 
-    ### I want to find out the number of times there was a building permit application submitted for a "One-Family Dwelling". I do this by using the dplyr() function filter() to filter through the data and count the number of variables labeled "One-Family Dwelling" in the specific_use_category
-    dim(filter(building_permits, specific_use_category == "One-Family Dwelling"))
+``` r
+### I want to find out the number of times there was a building permit application submitted for a "One-Family Dwelling". I do this by using the dplyr() function filter() to filter through the data and count the number of variables labeled "One-Family Dwelling" in the specific_use_category
+dim(filter(building_permits, specific_use_category == "One-Family Dwelling"))
+```
 
     ## [1] 4571   14
 
-    ### I want to find out the date of the most recent data on building permits being issued in the city of vancouver. To do this I use the dplyr() function arrange(). The arrange() function would typically order the selected column in ascending order but I will also apply the desc() function to the issue_date column, this orders the data so that the most recent date of permit issued is first.
-    arrange(building_permits, desc(issue_date))
+``` r
+### I want to find out the date of the most recent data on building permits being issued in the city of vancouver. To do this I use the dplyr() function arrange(). The arrange() function would typically order the selected column in ascending order but I will also apply the desc() function to the issue_date column, this orders the data so that the most recent date of permit issued is first.
+arrange(building_permits, desc(issue_date))
+```
 
     ## # A tibble: 20,680 × 14
     ##    permit_number issue_date project_value type_of_work                address   
@@ -264,10 +281,12 @@ comments outside of the code chunk?
     ## #   applicant_address <chr>, property_use <chr>, specific_use_category <chr>,
     ## #   year <dbl>, bi_id <dbl>
 
-    ## CHOICE 3 - *parking_meters*
+``` r
+## CHOICE 3 - *parking_meters*
 
-    ###I am using the glimpse function to view the data. 
-    glimpse(parking_meters)
+###I am using the glimpse function to view the data. 
+glimpse(parking_meters)
+```
 
     ## Rows: 10,032
     ## Columns: 22
@@ -294,8 +313,10 @@ comments outside of the code chunk?
     ## $ geo_local_area <chr> "West End", "Strathcona", "Riley Park", "West Point Gre…
     ## $ meter_id       <chr> "670805", "471405", "C80145", "D03704", "301023", "5913…
 
-    ### Looking at the tibble that the glimpse() function produced I would like to know more about the different types of meter heads that this data set contains information on. To do this I use the distinct() dplyr function. This function presents the unique types of parking meter heads in a tibble.
-    distinct(parking_meters, meter_head)
+``` r
+### Looking at the tibble that the glimpse() function produced I would like to know more about the different types of meter heads that this data set contains information on. To do this I use the distinct() dplyr function. This function presents the unique types of parking meter heads in a tibble.
+distinct(parking_meters, meter_head)
+```
 
     ## # A tibble: 7 × 1
     ##   meter_head         
@@ -308,9 +329,11 @@ comments outside of the code chunk?
     ## 6 Twin Bay Single    
     ## 7 Twin / Disability
 
-    ### I now know that there are seven different types of meter heads we have data on in this data set. 
-    ### I would like to look at information that is specifically for the meter head labeled "twin".
-    filter(parking_meters, meter_head == "Twin") 
+``` r
+### I now know that there are seven different types of meter heads we have data on in this data set. 
+### I would like to look at information that is specifically for the meter head labeled "twin".
+filter(parking_meters, meter_head == "Twin") 
+```
 
     ## # A tibble: 8,614 × 22
     ##    meter_head r_mf_9a_6p r_mf_6p_10 r_sa_9a_6p r_sa_6p_10 r_su_9a_6p r_su_6p_10
@@ -331,10 +354,12 @@ comments outside of the code chunk?
     ## #   t_su_6p_10 <chr>, time_misc <chr>, credit_card <chr>, pay_phone <chr>,
     ## #   longitude <dbl>, latitude <dbl>, geo_local_area <chr>, meter_id <chr>
 
-    ## CHOICE 4 - *apt_buildings*
+``` r
+## CHOICE 4 - *apt_buildings*
 
-    ### First I will use the dplyr function glimpse() to view the data set titled apt_buildings
-    glimpse(apt_buildings)
+### First I will use the dplyr function glimpse() to view the data set titled apt_buildings
+glimpse(apt_buildings)
+```
 
     ## Rows: 3,455
     ## Columns: 37
@@ -376,8 +401,10 @@ comments outside of the code chunk?
     ## $ cooling_room                     <chr> "NO", "NO", "NO", "NO", "NO", "NO", "…
     ## $ no_barrier_free_accessible_units <dbl> 2, 0, 0, 42, 0, NA, 14, 0, 0, 1, 25, …
 
-    ###Using the distinct() function I can check the different types of facilities available in the apartment buildings.
-    distinct(apt_buildings, facilities_available)
+``` r
+###Using the distinct() function I can check the different types of facilities available in the apartment buildings.
+distinct(apt_buildings, facilities_available)
+```
 
     ## # A tibble: 4 × 1
     ##   facilities_available
@@ -387,9 +414,11 @@ comments outside of the code chunk?
     ## 3 Unknown             
     ## 4 Not Available
 
-    ### Now I want to check what the most recent year built is in the data set, to do this I use the arrange() function and order the year_built column in descending order.
-    arrange(apt_buildings, desc(year_built)) %>%
-      select(year_built)
+``` r
+### Now I want to check what the most recent year built is in the data set, to do this I use the arrange() function and order the year_built column in descending order.
+arrange(apt_buildings, desc(year_built)) %>%
+  select(year_built)
+```
 
     ## # A tibble: 3,455 × 1
     ##    year_built
@@ -414,9 +443,11 @@ to choose this one? Briefly explain your choice below.
 
 <!-------------------------- Start your work below ---------------------------->
 
-    ##Data Set Choice & Explanation: 
+``` r
+##Data Set Choice & Explanation: 
 
-    ### Of the 4 data sets I chose to explore, I found that the *vancouver_trees* data created the most questions that I would like to answer. I appreciate that this data set has an array of different types of data pertaining to trees in Vancouver - such as date/ year planted and location co-ordinates. Having the common name, along with the genus and species name is also very helpful. A lot of the data in this set allows you to select from more broad terms to very specific. 
+### Of the 4 data sets I chose to explore, I found that the *vancouver_trees* data created the most questions that I would like to answer. I appreciate that this data set has an array of different types of data pertaining to trees in Vancouver - such as date/ year planted and location co-ordinates. Having the common name, along with the genus and species name is also very helpful. A lot of the data in this set allows you to select from more broad terms to very specific. 
+```
 
 <!----------------------------------------------------------------------------->
 
@@ -429,7 +460,9 @@ dataset. Note it down below.
 
 <!-------------------------- Start your work below ---------------------------->
 
-    # I would like to explore the relationship between different tree species and the locations in which they are found in abundance. 
+``` r
+# I would like to explore the relationship between different tree species and the locations in which they are found in abundance. 
+```
 
 <!----------------------------------------------------------------------------->
 
@@ -497,11 +530,12 @@ sufficient comments for a reader to understand your reasoning and code.
 
 <!-------------------------- Start your work below ---------------------------->
 
+``` r
 ## Question 2:
-
-    lilac <- filter(vancouver_trees, common_name == "TREE LILAC")
-    westlilac <- filter(lilac, neighbourhood_name == "WEST END")
-    distinct(westlilac, std_street)
+lilac <- filter(vancouver_trees, common_name == "TREE LILAC")
+westlilac <- filter(lilac, neighbourhood_name == "WEST END")
+distinct(westlilac, std_street)
+```
 
     ## # A tibble: 4 × 1
     ##   std_street  
@@ -511,14 +545,16 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 3 NICOLA ST   
     ## 4 BROUGHTON ST
 
-## Why I answered question 2:
+``` r
+## Why I answered question 2: 
 
-## I wanted to see how many Lilac trees there are in the data set in a given neighborhood of vancouver and which streets they are located on. To do this I had to create a new variable filtered by trees with the common name Lilac in the data set. I then created a second new variable which I filtered through the old variable ‘lilac’ and only stored lilac trees in the west end neighborhood (in a new variable called ‘westlilac’)
+## I wanted to see how many Lilac trees there are in the data set in a given neighborhood of vancouver and which streets they are located on. To do this I had to create a new variable filtered by trees with the common name Lilac in the data set. I then created a second new variable which I filtered through the old variable 'lilac' and only stored lilac trees in the west end neighborhood (in a new variable called 'westlilac')
 
 ## Question 5:
 
-    pru <- filter(vancouver_trees, genus_name == "PRUNUS" )
-    distinct(pru, common_name)
+pru <- filter(vancouver_trees, genus_name == "PRUNUS" )
+distinct(pru, common_name)
+```
 
     ## # A tibble: 51 × 1
     ##    common_name              
@@ -535,9 +571,11 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 10 RANCHO SARGENT CHERRY    
     ## # ℹ 41 more rows
 
-    pru %>%
-      group_by(neighbourhood_name) %>%
-    summarise(n = n())
+``` r
+pru %>%
+  group_by(neighbourhood_name) %>%
+summarise(n = n())
+```
 
     ## # A tibble: 22 × 2
     ##    neighbourhood_name           n
@@ -554,9 +592,11 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 10 KITSILANO                 1194
     ## # ℹ 12 more rows
 
-    distinct(vancouver_trees, diameter) %>%
-      select(diameter) %>%
-      arrange(desc(diameter))
+``` r
+distinct(vancouver_trees, diameter) %>%
+  select(diameter) %>%
+  arrange(desc(diameter))
+```
 
     ## # A tibble: 520 × 1
     ##    diameter
@@ -573,7 +613,9 @@ sufficient comments for a reader to understand your reasoning and code.
     ## 10      131
     ## # ℹ 510 more rows
 
-    filter(pru, diameter > 10)
+``` r
+filter(pru, diameter > 10)
+```
 
     ## # A tibble: 19,252 × 20
     ##    tree_id civic_number std_street       genus_name species_name cultivar_name  
@@ -595,7 +637,9 @@ sufficient comments for a reader to understand your reasoning and code.
     ## #   diameter <dbl>, curb <chr>, date_planted <date>, longitude <dbl>,
     ## #   latitude <dbl>
 
-    filter(pru, diameter > 50)
+``` r
+filter(pru, diameter > 50)
+```
 
     ## # A tibble: 10 × 20
     ##    tree_id civic_number std_street genus_name species_name cultivar_name
@@ -616,35 +660,38 @@ sufficient comments for a reader to understand your reasoning and code.
     ## #   diameter <dbl>, curb <chr>, date_planted <date>, longitude <dbl>,
     ## #   latitude <dbl>
 
-## Why I answered question 5:
+``` r
+## Why I answered question 5: 
 
-## I would like to eventually zone in on the cherry trees in this data set, for now I thought I would filter for their genus. I did this by using the dplyr filter() function to search through the column genus\_name for the genus “PRUNUS”.
+## I would like to eventually zone in on the cherry trees in this data set, for now I thought I would filter for their genus. I did this by using the dplyr filter() function to search through the column genus_name for the genus "PRUNUS". 
 
-# After doing so, I thought I would check to see that there are cherry trees in the data set and what their common names are using the distinct() fucntion.
+# After doing so, I thought I would check to see that there are cherry trees in the data set and what their common names are using the distinct() function. 
 
-\#Finally to make sure there is an adequate amount of data for the
-different neighborhoods I though that I would check the number of trees
-in the genus “PRUNUS” by neighborhood.
+#Finally to make sure there is an adequate amount of data for the different neighborhoods I though that I would check the number of trees in the genus "PRUNUS" by neighborhood. 
 
 ## Question 1:
 
-    pru %>%
-      filter(diameter < 50) %>%
-    ggplot(aes (x = diameter)) + 
-      geom_histogram(binwidth = 6) 
+pru %>%
+  filter(diameter < 50) %>%
+ggplot(aes (x = diameter)) + 
+  geom_histogram(binwidth = 6) 
+```
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-8-1.png)
-\## Why I answered question 1:
+![](mini-project-1_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+``` r
+## Why I answered question 1: 
 
 ### Histograms are a nice way to look at the distribution of a numeric variable, I was curious after filtering for the diameters of trees in the genus prunus in question 5, what the distribution of the variable diameter looks like for the genus prunus under 50 (since 0-50 seems to be where majority of the data points lie).
 
 ## Question 7:
 
-    dt_tib <- as_tibble(pru) %>%
-    filter(neighbourhood_name == "DOWNTOWN") %>%
-      select(date_planted, common_name, neighbourhood_name)
+dt_tib <- as_tibble(pru) %>%
+filter(neighbourhood_name == "DOWNTOWN") %>%
+  select(date_planted, common_name, neighbourhood_name)
 
-    dt_tib
+dt_tib
+```
 
     ## # A tibble: 171 × 3
     ##    date_planted common_name              neighbourhood_name
@@ -661,32 +708,39 @@ in the genus “PRUNUS” by neighborhood.
     ## 10 2012-04-13   RANCHO SARGENT CHERRY    DOWNTOWN          
     ## # ℹ 161 more rows
 
-## Why I answered question 7:
+``` r
+## Why I answered question 7: 
 
-### I wanted to put the trees in genus ‘prunus’ into a new tibble that only showed the ones located in the Downtown neighborhood. I also wanted the columns date\_planted and common\_name, so that I can further use this data to find out how many trees there is no (or <NA>) tree planting date for in this area. This tibble give me options to further explore the genus ‘prunus’ trees in the neighborhood of downtown.
+### I wanted to put the trees in genus 'prunus' into a new tibble that only showed the ones located in the Downtown neighborhood. I also wanted the columns date_planted and common_name, so that I can further use this data to find out how many trees there is no (or <NA>) tree planting date for in this area. This tibble give me options to further explore the genus 'prunus' trees in the neighborhood of downtown. 
 
-### To do this I created a new tibble with this information and named it dt\_tib.
+### To do this I created a new tibble with this information and named it dt_tib.
+```
 
-    <!----------------------------------------------------------------------------->
+<!----------------------------------------------------------------------------->
 
-    # Task 3: Choose research questions 
+# Task 3: Choose research questions
 
-    **(4 points)** So far, you have chosen a dataset and gotten familiar with it through exploring the data. You have also brainstormed one research question that interested you (Task 1.4).  Now it's time to pick 4 research questions that you would like to explore in Milestone 2! Write the 4 questions and any additional comments below. 
+**(4 points)** So far, you have chosen a dataset and gotten familiar
+with it through exploring the data. You have also brainstormed one
+research question that interested you (Task 1.4). Now it’s time to pick
+4 research questions that you would like to explore in Milestone 2!
+Write the 4 questions and any additional comments below.
 
-    <!--- *****START HERE***** --->
+<!--- *****START HERE***** --->
 
-    ```r
-    ### Four Research Question - For Future Exploration:
+``` r
+### Four Research Question - For Future Exploration:
 
-    # While looking through the vancouver_trees data set many questions crossed my mind, below I have managed to narrow my questions down to four that I hope to answer in the future:
+# While looking through the vancouver_trees data set many questions crossed my mind, below I have managed to narrow my questions down to four that I hope to answer in the future:
 
-    ##Question 1: How many cherry trees are there vancouver west and vancouver east?
+##Question 1: How many cherry trees are there vancouver west and vancouver east?
 
-    ##Question 2: Which neighborhood has the highest density of each of the cherry tree species? 
+##Question 2: Which neighborhood has the highest density of each of the cherry tree species? 
 
-    ##Question 3: Is there a relationship between the location of the cherry trees and their height?
+##Question 3: Is there a relationship between the location of the cherry trees and their height?
 
-    ##Question 4: Is there a geographical area of vancouver where the city planted more cherry trees? If so, does it differ by decade? 
+##Question 4: Is there a geographical area of vancouver where the city planted more cherry trees? If so, does it differ by decade? 
+```
 
 <!----------------------------->
 
@@ -713,13 +767,13 @@ repository on GitHub.
 
 Minimum contents of the README file:
 
--   In a sentence or two, explains what this repository is, so that
-    future-you or someone else stumbling on your repository can be
-    oriented to the repository.
--   In a sentence or two (or more??), briefly explains how to engage
-    with the repository. You can assume the person reading knows the
-    material from STAT 545A. Basically, if a visitor to your repository
-    wants to explore your project, what should they know?
+- In a sentence or two, explains what this repository is, so that
+  future-you or someone else stumbling on your repository can be
+  oriented to the repository.
+- In a sentence or two (or more??), briefly explains how to engage with
+  the repository. You can assume the person reading knows the material
+  from STAT 545A. Basically, if a visitor to your repository wants to
+  explore your project, what should they know?
 
 Once you get in the habit of making README files, and seeing more README
 files in other projects, you’ll wonder how you ever got by without them!
@@ -729,16 +783,16 @@ They are tremendously helpful.
 
 All output is readable, recent and relevant:
 
--   All Rmd files have been `knit`ted to their output md files.
--   All knitted md files are viewable without errors on Github. Examples
-    of errors: Missing plots, “Sorry about that, but we can’t show files
-    that are this big right now” messages, error messages from broken R
-    code
--   All of these output files are up-to-date – that is, they haven’t
-    fallen behind after the source (Rmd) files have been updated.
--   There should be no relic output files. For example, if you were
-    knitting an Rmd to html, but then changed the output to be only a
-    markdown file, then the html file is a relic and should be deleted.
+- All Rmd files have been `knit`ted to their output md files.
+- All knitted md files are viewable without errors on Github. Examples
+  of errors: Missing plots, “Sorry about that, but we can’t show files
+  that are this big right now” messages, error messages from broken R
+  code
+- All of these output files are up-to-date – that is, they haven’t
+  fallen behind after the source (Rmd) files have been updated.
+- There should be no relic output files. For example, if you were
+  knitting an Rmd to html, but then changed the output to be only a
+  markdown file, then the html file is a relic and should be deleted.
 
 (0.5 point deduction if any of the above criteria are not met. 1 point
 deduction if most or all of the above criteria are not met.)
