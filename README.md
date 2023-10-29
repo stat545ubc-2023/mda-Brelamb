@@ -1,13 +1,33 @@
-# Mini - Data Analyis - STAT 545 
-## This is the Mini Data Anaylsis of Bre Lambert for STAT545 
-### Part 1 - Brief Summary of Steps:
-1. This data analysis starts off with choosing 4 data sets from r package datateachr
-2. Dplyr functions are used to explore each data set
-3. After choosing a data set, reasoning is given as to why and 1 question that you may want to answer with the dataset
-4. Selecting 4 of 8 activities in part 2, the data set is explored in depth (having a goal in mind)
-5. Explaination is given for each of the 4 tasks that were executed in the previous step
-6. Write down 4 questions you would like to answer using your data set in the future
-## Documents you will find in this repository:
-1. *README.md* - This file contains a the file directory you are reading now along with brief instructions for the assingment.
-2. *mini-project-1.rmd* - This file contains the edited .rmd file that r code was written directly into for this project
-3. *mini-project-1.md* - This is a markdown file that has been knit together from r studio using the code that was typed into the .rmd file 
+## Mini Data Analysis Project (Part 1 & 2)
+
+#### **Repository goals:**
+
+This repository contains one mini data analysis (Mini data analysis 1 and Mini data analysis 2) completed for the course STAT545A at UBC. The goal of this project is to familiarize yourself with data wrangling and visualization. This is done by using r code and packages such as dplyr, ggplot2 and tidyverse to produce information and graphs from a data set which is chosen from the package datateachr(). 
+
+### **Mini Data Analysis – Part 1** 
+[click here for detailed instructions](https://stat545.stat.ubc.ca/mini-project/mini-project-1/) 
+
+In part one of the mini data analysis, 
+
+
+### **Mini Data Analysis – Part 2**
+[click here for detailed instructions](https://stat545.stat.ubc.ca/mini-project/mini-project-2/)
+
+In part two of the mini data analysis, I answer four questions formulated by exploring the data in part one of the data analysis. For each of the four questions from milestone 1, I choose one summarizing activity and one graphing activity to further explore the question (and hopefully get closer to answering it!). Then I examine the data set and determine whether it is tidy or not - and proceed to untidy or tidy it dependent on its original state. The data analysis then goes on to explore modeling, where I use the lm() function to create a model then interpret it. Finally, I explore creating .csv and .rds files and creating a path using the here() function. 
+
+#### Files in this Repository (mda-Brelamb): 
+
+1.	**README.md File**:
+The README.md file consists of a brief overview of the goals of this repository/ project, an explanation of all the files/ folders in the repository. It also contains instructions on how to interact with this repository.
+2.	**Milestone_1 Folder**:
+ The Milestone_1 folder contains 
+3.	**Milestone_2 Folder**:
+The Milestone_2 folder contains 
+4.	**Output Folder**:
+ The output folder contains 
+
+
+#### Interacting with this repository: 
+
+-	You can use git, R or R studio to run the files in this repository
+-	 If you would like to use R studio 
